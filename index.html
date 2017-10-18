@@ -11,17 +11,18 @@
 		<div class="login">
 			<img src="imgs/login.png"">
 			<div class="app-title">Login</div>
+			<script type="text/javascript" src="js/validator.js"></script>
 
 			<div class="login-form">
-				<div class="control-group">
-					<input type="text" value="" placeholder="username or email" id="login-name">
-				</div>
-
-				<div class="control-group">
-					<input type="password" value="" placeholder="password" id="login-pass">
-				</div>
-
-				<a class="btn" href="#">Login</a>
+				<form name=loginform onsubmit="return validate_login()" method="post">
+					<div class="control-group">
+						<input name="username" type="text" value="" placeholder="email" id="login-name">
+					</div>
+					<div class="control-group">
+						<input name="password" type="password" value="" placeholder="password" id="login-pass">
+					</div>
+					<input class="btn" type="submit" value="Login">
+				</form>
 				<a class="login-link" href="#">Forgot password?</a>
 			</div>
 		</div>
